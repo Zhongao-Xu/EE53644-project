@@ -1,0 +1,25 @@
+VGG-16： 训练模型的代码
+Vgg16_cifar 10 .pth: 保存的模型参数
+VGG-16_test： 加载模型并测试的代码
+
+
+找到CUDA 版本
+https://stackoverflow.com/questions/9727688/how-to-get-the-cuda-version
+或者CMD 使用nvidia-smi:
+C:\Users\17910> nvidia-smi
+Sun Oct 27 13:03:31 2024
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 566.03                 Driver Version: 566.03         CUDA Version: 12.7     |
+
+
+安装支持不同CUDA版本的PyTorch:
+https://stackoverflow.com/questions/70340812/how-to-install-pytorch-with-cuda-support-with-pip-in-visual-studio
+或者https://pytorch.org/get-started/locally/
+或者使用 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+最后cu118基于你的CUDA版本
+使用这个代码测试GPU是否可用
+import torch
+print(torch.cuda.is_available())  # 输出应为 True
+
+
+直接运行vgg-16_test 就可以
