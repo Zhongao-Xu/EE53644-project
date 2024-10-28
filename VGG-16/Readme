@@ -1,7 +1,8 @@
 VGG-16： 训练模型的代码
 Vgg16_cifar 10 .pth: 保存的模型参数
 VGG-16_test： 加载模型并测试的代码
-
+model_profile: PyTorch Profile
+model_profile_image: Chrome trace
 
 找到CUDA 版本
 https://stackoverflow.com/questions/9727688/how-to-get-the-cuda-version
@@ -23,3 +24,5 @@ print(torch.cuda.is_available())  # 输出应为 True
 
 
 直接运行vgg-16_test 就可以
+
+将trace.json 在chrome://tracing/中打开
